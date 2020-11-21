@@ -1,4 +1,4 @@
-app.service('assembler', ['opcodes', function (opcodes) {
+app.service('assembler', ['opcodes','$log', function (opcodes, $log) {
     return {
         go: function (input) {
             // Use https://www.debuggex.com/
@@ -629,7 +629,7 @@ app.service('assembler', ['opcodes', function (opcodes) {
                     }
                 }
             }
-
+$log.debug("code asm "+ code);
             return {code: code, mapping: mapping, labels: labels};
         }
     };
