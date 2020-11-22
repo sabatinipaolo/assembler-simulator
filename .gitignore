@@ -4,3 +4,4 @@
 node_modules/*
 ASMSimulator.iml
 *~
+package-lock.json
