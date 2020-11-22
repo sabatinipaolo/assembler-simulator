@@ -629,7 +629,6 @@ app.service('assembler', ['opcodes','$log', function (opcodes, $log) {
                     }
                 }
             }
-$log.debug("code asm "+ code);
             return {code: code, mapping: mapping, labels: labels};
         }
     };
