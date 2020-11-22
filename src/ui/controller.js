@@ -1,4 +1,4 @@
-app.controller('Ctrl', ['$document', '$scope', '$timeout', 'cpu', 'memory', 'assembler', function ($document, $scope, $timeout, cpu, memory, assembler) {
+app.controller('Ctrl', ['$log','$document', '$scope', '$timeout', 'cpu', 'memory', 'assembler','loader', function ($log, $document, $scope, $timeout, cpu, memory, assembler,loader) {
     $scope.memory = memory;
     $scope.cpu = cpu;
     $scope.error = '';
@@ -101,6 +101,32 @@ app.controller('Ctrl', ['$document', '$scope', '$timeout', 'cpu', 'memory', 'ass
 
             for (var i = 0, l = binary.length; i < l; i++) {
                 memory.data[i] = binary[i];
+            }
+        } catch (e) {
+            if (e.line !== undefined) {
+                $scope.error = e.line + " | " + e.error;
+                $scope.selectedLine = e.line;
+            } else {
+                $scope.error = e.error;
+            }
+        }
+    };
+    $scope.loadExe = function () {
+        try {
+            $scope.reset();
+
+            var assembly = loader.go($scope.code);
+            $scope.mapping = {};
+            var binary = assembly.code;
+       
+            $scope.labels = {};
+				
+				if (binary.length > memory.data.length)
+                throw "Binary code does not fit into the memory. Max " + memory.data.length + " bytes are allowed";
+
+            for (var i = 0, l = binary.length; i < l; i++) {
+					memory.data[i] = binary[i];
+
             }
         } catch (e) {
             if (e.line !== undefined) {
