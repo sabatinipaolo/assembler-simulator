@@ -3,7 +3,7 @@ app.controller('Ctrl', ['$log','$document', '$scope', '$timeout', 'cpu', 'memory
     $scope.cpu = cpu;
     $scope.error = '';
     $scope.isRunning = false;
-    $scope.displayHex = true;
+    $scope.displayHex = false;
     $scope.displayInstr = true;
     $scope.displayA = false;
     $scope.displayB = false;
