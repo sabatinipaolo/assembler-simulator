@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Simple 8-bit Assembler - Codici Operativi Help</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <a href="https://github.com/Schweigi/assembler-simulator"><img style="z-index:1001;position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <nav class="navbar navbar-inverse" role="navigation" style="background-color:#428BCA;border:0px;border-radius:0px;">
+        <div class="container">
+            <div class="navbar-header">
+                <a type="button" class="btn btn-default navbar-btn" href="index.html">Simulator</a>
+            </div>
+            <div class="navbar-header navbar-right">
+                <a class="navbar-brand" style="color:#FFFFFF">Simple 8-bit Assembler Simulator</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h4>Codici operativi istruzioni </h4>
+        <p> Questa pagina serve per "disassemblare" un eseguibile, sono ordinati numericamente i codici operativi delle istruzioni e relative codifiche</p>
+        
+   <span id="riepilogo" class="codici"> 
+		<a href="#opcode0">0</a>
+		<a href="#opcode1">1</a>
+		<a href="#opcode2">2</a>
+		<a href="#opcode3">3</a>
+		<a href="#opcode4">4</a>
+		<a href="#opcode5">5</a>
+		<a href="#opcode6">6</a>
+		<a href="#opcode7">7</a>
+		<a href="#opcode8">8</a>
+		<a href="#opcode9">9</a>
+		<a href="#opcode10">10</a>
+		<a href="#opcode11">11</a>
+		<a href="#opcode12">12</a>
+		<a href="#opcode13">13</a>
+		<a href="#opcode14">14</a>
+		<a href="#opcode15">15</a>
+		<a href="#opcode16">16</a>
+		<a href="#opcode17">17</a>
+		<a href="#opcode18">18</a>
+		<a href="#opcode19">19</a>
+		<a href="#opcode20">20</a>
+		<a href="#opcode21">21</a>
+		<a href="#opcode22">22</a>
+		<a href="#opcode23">23</a>
+		<a href="#opcode24">24</a>
+		<a href="#opcode25">25</a>
+		<a href="#opcode26">26</a>
+		<a href="#opcode27">27</a>
+		<a href="#opcode28">28</a>
+		<a href="#opcode29">29</a>
+		<a href="#opcode30">30</a>
+		<a href="#opcode31">31</a>
+		<a href="#opcode32">32</a>
+		<a href="#opcode33">33</a>
+		<a href="#opcode34">34</a>
+		<a href="#opcode35">35</a>
+		<a href="#opcode36">36</a>
+		<a href="#opcode37">37</a>
+		<a href="#opcode38">38</a>
+		<a href="#opcode39">39</a>
+		<a href="#opcode40">40</a>
+		<a href="#opcode41">41</a>
+		<a href="#opcode42">42</a>
+		<a href="#opcode43">43</a>
+		<a href="#opcode44">44</a>
+		<a href="#opcode45">45</a>
+		<a href="#opcode46">46</a>
+		<a href="#opcode47">47</a>
+		<a href="#opcode48">48</a>
+		<a href="#opcode49">49</a>
+		<a href="#opcode50">50</a>
+		<a href="#opcode51">51</a>
+		<a href="#opcode52">52</a>
+		<a href="#opcode53">53</a>
+		<a href="#opcode54">54</a>
+		<a href="#opcode55">55</a>
+		<a href="#opcode56">56</a>
+		<a href="#opcode57">57</a>
+		<a href="#opcode58">58</a>
+		<a href="#opcode59">59</a>
+		<a href="#opcode60">60</a>
+		<a href="#opcode61">61</a>
+		<a href="#opcode62">62</a>
+		<a href="#opcode63">63</a>
+		<a href="#opcode64">64</a>
+		<a href="#opcode65">65</a>
+		<a href="#opcode66">66</a>
+		<a href="#opcode67">67</a>
+		<a href="#opcode68">68</a>
+		<a href="#opcode69">69</a>
+		<a href="#opcode70">70</a>
+		<a href="#opcode71">71</a>
+		<a href="#opcode72">72</a>
+		<a href="#opcode73">73</a>
+		<a href="#opcode74">74</a>
+		<a href="#opcode75">75</a>
+		<a href="#opcode76">76</a>
+		<a href="#opcode77">77</a>
+		<a href="#opcode78">78</a>
+		<a href="#opcode79">79</a>
+		<a href="#opcode80">80</a>
+		<a href="#opcode81">81</a>
+		<a href="#opcode82">82</a>
+		<a href="#opcode83">83</a>
+		<a href="#opcode84">84</a>
+		<a href="#opcode85">85</a>
+		<a href="#opcode86">86</a>
+		<a href="#opcode87">87</a>
+		<a href="#opcode88">88</a>
+		<a href="#opcode89">89</a>
+		<a href="#opcode90">90</a>
+		<a href="#opcode91">91</a>
+		<a href="#opcode92">92</a>
+		<a href="#opcode93">93</a>
+		<a href="#opcode94">94</a>
+		<a href="#opcode95">95</a>
+		<a href="#opcode96">96</a>
+		<a href="#opcode97">97</a>
+</span>
+<span>
+			<div id="opcode0">
+				<hr>
+				<h4> Decimal: 0  Hex 0x00 HLT arresta </h4>
+				<pre> HLT </pre>
+				Istruzione che blocca l'esecuzione dell'emulatore.
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>
+			 
+			 
+			<div id="opcode1">
+				<hr>
+				<h3> Decimal: 1  Hex 0x01 MOV da registro a registro </h3>
+				<pre> MOV reg_dest , reg_src 	codifica 01 cod_reg_dest cod_reg_src	3 byte</pre>
+				Muove il contenuto del registro reg_src in reg_dest.<br>
+				
+				Esempio: se prima dell'esecuzione A=3 e B=7 <br>
+				 MOV A,B codificata come 01 00 01  <br>
+				 dopo l'esecuzione  A=7 e b=7 
+			<br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>
+
+			<div id="opcode2">
+				<hr>
+				<h3> Decimal: 2 Hex: 0x02 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+			<div id="opcode3">
+				<hr>
+				<h3> Decimal: 3 Hex: 0x03 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+			<div id="opcode4">
+				<hr>
+				<h3> Decimal: 4 Hex: 0x04 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+			<div id="opcode5">
+				<hr>
+				<h3> Decimal: 5 Hex: 0x05 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode6">
+				<hr>
+				<h3> Decimal: 6 Hex: 0x06 MOV costante in registro</h3>
+
+				<pre> MOV reg, costante 	06 cod_reg costante 	3 byte</pre> 
+
+				 muove la costante nel registro indicato. <br>
+				 esempio: MOV A, 7   codificata con 06 00 07  dopo 
+				 l'esecuzione il registro A contiene il valore 07.
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode7">
+				<hr>
+				<h3> Decimal: 7 Hex: 0x07 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode8">
+				<hr>
+				<h3> Decimal: 8 Hex: 0x08 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode9">
+				<hr>
+				<h3> Decimal: 9 Hex: 0x09 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode10">
+				<hr>
+				<h3> Decimal: 10 Hex: 0x0A todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode11">
+				<hr>
+				<h3> Decimal: 11 Hex: 0x0B todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode12">
+				<hr>
+				<h3> Decimal: 12 Hex: 0x0C todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode13">
+				<hr>
+				<h3> Decimal: 13 Hex: 0x0D todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode14">
+				<hr>
+				<h3> Decimal: 14 Hex: 0x0E todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode15">
+				<hr>
+				<h3> Decimal: 15 Hex: 0x0F todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode16">
+				<hr>
+				<h3> Decimal: 16 Hex: 0x10 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode17">
+				<hr>
+				<h3> Decimal: 17 Hex: 0x11 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode18">
+				<hr>
+				<h3> Decimal: 18 Hex: 0x12 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode19">
+				<hr>
+				<h3> Decimal: 19 Hex: 0x13 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode20">
+				<hr>
+				<h3> Decimal: 20 Hex: 0x14 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode21">
+				<hr>
+				<h3> Decimal: 21 Hex: 0x15 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode22">
+				<hr>
+				<h3> Decimal: 22 Hex: 0x16 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode23">
+				<hr>
+				<h3> Decimal: 23 Hex: 0x17 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode24">
+				<hr>
+				<h3> Decimal: 24 Hex: 0x18 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode25">
+				<hr>
+				<h3> Decimal: 25 Hex: 0x19 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode26">
+				<hr>
+				<h3> Decimal: 26 Hex: 0x1A todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode27">
+				<hr>
+				<h3> Decimal: 27 Hex: 0x1B todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode28">
+				<hr>
+				<h3> Decimal: 28 Hex: 0x1C todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode29">
+				<hr>
+				<h3> Decimal: 29 Hex: 0x1D todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode30">
+				<hr>
+				<h3> Decimal: 30 Hex: 0x1E todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode31">
+				<hr>
+				<h3> Decimal: 31 Hex: 0x1F todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode32">
+				<hr>
+				<h3> Decimal: 32 Hex: 0x20 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode33">
+				<hr>
+				<h3> Decimal: 33 Hex: 0x21 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode34">
+				<hr>
+				<h3> Decimal: 34 Hex: 0x22 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode35">
+				<hr>
+				<h3> Decimal: 35 Hex: 0x23 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode36">
+				<hr>
+				<h3> Decimal: 36 Hex: 0x24 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode37">
+				<hr>
+				<h3> Decimal: 37 Hex: 0x25 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode38">
+				<hr>
+				<h3> Decimal: 38 Hex: 0x26 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode39">
+				<hr>
+				<h3> Decimal: 39 Hex: 0x27 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode40">
+				<hr>
+				<h3> Decimal: 40 Hex: 0x28 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode41">
+				<hr>
+				<h3> Decimal: 41 Hex: 0x29 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode42">
+				<hr>
+				<h3> Decimal: 42 Hex: 0x2A todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode43">
+				<hr>
+				<h3> Decimal: 43 Hex: 0x2B todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode44">
+				<hr>
+				<h3> Decimal: 44 Hex: 0x2C todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode45">
+				<hr>
+				<h3> Decimal: 45 Hex: 0x2D todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode46">
+				<hr>
+				<h3> Decimal: 46 Hex: 0x2E todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode47">
+				<hr>
+				<h3> Decimal: 47 Hex: 0x2F todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode48">
+				<hr>
+				<h3> Decimal: 48 Hex: 0x30 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode49">
+				<hr>
+				<h3> Decimal: 49 Hex: 0x31 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode50">
+				<hr>
+				<h3> Decimal: 50 Hex: 0x32 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode51">
+				<hr>
+				<h3> Decimal: 51 Hex: 0x33 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode52">
+				<hr>
+				<h3> Decimal: 52 Hex: 0x34 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode53">
+				<hr>
+				<h3> Decimal: 53 Hex: 0x35 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode54">
+				<hr>
+				<h3> Decimal: 54 Hex: 0x36 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode55">
+				<hr>
+				<h3> Decimal: 55 Hex: 0x37 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode56">
+				<hr>
+				<h3> Decimal: 56 Hex: 0x38 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode57">
+				<hr>
+				<h3> Decimal: 57 Hex: 0x39 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode58">
+				<hr>
+				<h3> Decimal: 58 Hex: 0x3A todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode59">
+				<hr>
+				<h3> Decimal: 59 Hex: 0x3B todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode60">
+				<hr>
+				<h3> Decimal: 60 Hex: 0x3C todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode61">
+				<hr>
+				<h3> Decimal: 61 Hex: 0x3D todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode62">
+				<hr>
+				<h3> Decimal: 62 Hex: 0x3E todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode63">
+				<hr>
+				<h3> Decimal: 63 Hex: 0x3F todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode64">
+				<hr>
+				<h3> Decimal: 64 Hex: 0x40 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode65">
+				<hr>
+				<h3> Decimal: 65 Hex: 0x41 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode66">
+				<hr>
+				<h3> Decimal: 66 Hex: 0x42 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode67">
+				<hr>
+				<h3> Decimal: 67 Hex: 0x43 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode68">
+				<hr>
+				<h3> Decimal: 68 Hex: 0x44 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode69">
+				<hr>
+				<h3> Decimal: 69 Hex: 0x45 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode70">
+				<hr>
+				<h3> Decimal: 70 Hex: 0x46 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode71">
+				<hr>
+				<h3> Decimal: 71 Hex: 0x47 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode72">
+				<hr>
+				<h3> Decimal: 72 Hex: 0x48 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode73">
+				<hr>
+				<h3> Decimal: 73 Hex: 0x49 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode74">
+				<hr>
+				<h3> Decimal: 74 Hex: 0x4A todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode75">
+				<hr>
+				<h3> Decimal: 75 Hex: 0x4B todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode76">
+				<hr>
+				<h3> Decimal: 76 Hex: 0x4C todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode77">
+				<hr>
+				<h3> Decimal: 77 Hex: 0x4D todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode78">
+				<hr>
+				<h3> Decimal: 78 Hex: 0x4E todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode79">
+				<hr>
+				<h3> Decimal: 79 Hex: 0x4F todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode80">
+				<hr>
+				<h3> Decimal: 80 Hex: 0x50 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode81">
+				<hr>
+				<h3> Decimal: 81 Hex: 0x51 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode82">
+				<hr>
+				<h3> Decimal: 82 Hex: 0x52 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode83">
+				<hr>
+				<h3> Decimal: 83 Hex: 0x53 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode84">
+				<hr>
+				<h3> Decimal: 84 Hex: 0x54 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode85">
+				<hr>
+				<h3> Decimal: 85 Hex: 0x55 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode86">
+				<hr>
+				<h3> Decimal: 86 Hex: 0x56 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode87">
+				<hr>
+				<h3> Decimal: 87 Hex: 0x57 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode88">
+				<hr>
+				<h3> Decimal: 88 Hex: 0x58 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode89">
+				<hr>
+				<h3> Decimal: 89 Hex: 0x59 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode90">
+				<hr>
+				<h3> Decimal: 90 Hex: 0x5A todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode91">
+				<hr>
+				<h3> Decimal: 91 Hex: 0x5B todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode92">
+				<hr>
+				<h3> Decimal: 92 Hex: 0x5C todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode93">
+				<hr>
+				<h3> Decimal: 93 Hex: 0x5D todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode94">
+				<hr>
+				<h3> Decimal: 94 Hex: 0x5E todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode95">
+				<hr>
+				<h3> Decimal: 95 Hex: 0x5F todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode96">
+				<hr>
+				<h3> Decimal: 96 Hex: 0x60 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+
+			<div id="opcode97">
+				<hr>
+				<h3> Decimal: 97 Hex: 0x61 todo .... </h3>
+
+				<pre> todo ....</pre> 
+
+				 todo: inserie descrizione ....
+			 <br>
+			<a href=#riepilogo>   elenco codici </a> 
+		</div>	
+
+	</span>
+</body>
+</html>
